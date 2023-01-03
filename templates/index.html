@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+{% include "headers.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<html lang="es">
+<body>
+<!-- Masthead-->
+<header class="masthead"
+        style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image.jpg')}}')">
+    <div class="container">
+        <div class="masthead-heading">Classic Bun</div>
+        <div class="masthead-subheading">Nuestra calidad, su éxito</div>
+        <a class="btn btn-primary btn-xl" href="#products">¿Qué hacemos?</a>
+    </div>
+</header>
+<!-- Productos-->
+<section class="page-section" id="products">
+        <div class="text-center">
+            <h2 class="section-heading ">¿Qué hacemos?</h2>
+            <p class="section-subheading text-muted">Nuestro producto está basado en los requerimientos de cada cliente,
+                guardando la delicadeza de su sabor, frescura y textura clásicos de nuestra marca. </p>
+            <h3>Nuestros princiales productos:</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-4 md-6 sm-12">
+                <div>
+                    <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/burger.png')}}">
+                    <h4 class="my-3">Pan para Hamburguesa</h4>
+                    <p class="text-muted">Pan de hamburguesa diseñado para los clientes más exigentes, con los estándares
+                        más altos de calidad. Capaz de soportar gran cantidad de aderezo sin deshacerse y con los gramajes
+                        más altos del mercado</p>
+                </div>
+            </div>
+            <div class="col-lg-4 md-6 sm-12">
+                <div>
+                    <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/hotdog.png')}}">
+                    <h4 class="my-3">Pan para Hot Dog</h4>
+                    <p class="text-muted">Pan de hot dog para todo tamaño de embutido, con la profundidad de corte exacta y
+                        el mejor sabor para realzar su producto.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 md-6 sm-12">
+                <div>
+                    <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/tajapan.png')}}">
+                    <h4 class="my-3">Pan para Tajapan</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                        architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+            </div>
+        <div class="text-center">
+            <br>
+            <h3 class="text-center"><a href="{{ url_for('static', filename='assets/pdf/Classic_bun.pdf')}}">Catalogo completo</a></h3>
+        </div>
+
+</section>
+<!-- Ubicación -->
+<section class="page-section bg-light" id="processes">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading ">¿Dónde lo hacemos?</h2>
+            <p class="section-subheading text-muted" style="margin-bottom: 0;">En nuestra planta ubicada en <a
+                        href="https://goo.gl/maps/rtczU8wege8oPRjP8">Santa Teresa de Jesús OE 10-B (Quito,Ecuador)</a> junto con un gran equipo de colaboradores
+                capacitados y equipos modernos.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center; padding: 2rem">
+                <img style="width:100%" src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}">
+            </div>
+            <div class="col-6 col-lg-4" style="text-align:center; padding: 2rem">
+                <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta1.jpg')}}">
+            </div>
+            <div class="col-6 col-lg-4" style="text-align:center; padding: 2rem">
+                <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta2.jpg')}}">
+            </div>
+            <div class="col-6 col-lg-4" style="text-align:center; padding: 2rem">
+                <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta3.jpg')}}">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Certificaciones-->
+<section class="page-section" id="certificates">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading ">¿Comó garantizamos lo que hacemos?</h2>
+            <h3 class="section-subheading text-muted">Contamos con certificaciones que avalan la calidad de nuestros
+                productos</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle"
+                         src="{{url_for('static', filename='assets/img/certificaciones/BPM.jpg')}}"/>
+                    <h4>CERTIFICADO DE BUENAS PRÁCTICAS DE MANUFACTURA CÓDIGO ÚNICO: 0005-HNA-0622</h4>
+                    <p style="text-align:left">"Las Buenas Prácticas de Manufactura es aquella parte del aseguramiento
+                        de la calidad que garantiza que los productos son consistentemente producidos y controlados
+                        según los estándares de calidad apropiados para su uso previsto y como lo requiere la
+                        autorización de comercialización..."</p>
+                    <p style="text-align:right">ARCSA,<a href="https://www.controlsanitario.gob.ec">Link info</a></p>
+                    <p style="text-align:right"><a href="{{url_for('static', filename='assets/pdf/BPM.pdf')}}">Link
+                        Certificado</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle"
+                         src="{{url_for('static', filename='assets/img/certificaciones/FSSC22000.jpg')}}"/>
+                    <h4>FSSC 22000</h4>
+                    <p style="text-align:left">"FSSC 22000 ha tenido un impacto en la seguridad alimentaria mundial
+                        durante más de 12 años. El esquema proporciona un modelo de certificación que se puede utilizar
+                        en toda la cadena de suministro de alimentos para garantizar los estándares y procesos de
+                        seguridad alimentaria. FSSC 22000 está reconocido por GFSI y sigue la descripción de la
+                        categoría de la cadena alimentaria tal como se define en ISO/TS 22003."</p>
+                    <p style="text-align:right">Foundation Food Saftey System Certification, <a
+                            href="https://www.fssc.com/about/">Link info</a></p>
+                    <p style="text-align:right"><a href="{{url_for('static', filename='assets/pdf/FSSC22000.pdf')}}">Link
+                        Certificado</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Historia-->
+<section class="page-section bg-light" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading ">¿Hace cuantó lo hacemos?</h2>
+            <p class="section-subheading text-muted" style="text-align:left;">José Luzuriaga oriundo de Ibarra, Ecuador,
+                en el momento en el que finalizaba sus estudios preparó como proyecto de tesis un estudio de
+                factibilidad de una panificadora dedicada a la producción de pan para franquicias.<br> Simultáneamente
+                Burger King se buscaba establecer en Quito, franquicia que requería de una panificadora con
+                características similares a las planteadas en su tesis. La franquicia se encontró con el problema que
+                ninguna panificadora en Quito le podía ofrecer pan cortado.</p>
+            <br>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid2" src="{{url_for('static', filename='assets/img/about/soil.jpg')}}"/></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>10 de junio de 1995</h4>
+                        <h4 class="subheading">Nuestros Inicios</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">José Luzuriaga aficionado a la mecánica decidió
+                        desarrollar una máquina que pueda realizar este corte, iniciando una panificadora para proveer
+                        de producto a la franquicia naciendo así la Panificadora Classic Bun.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid2" src="{{url_for('static', filename='assets/img/company/fabrica-1.jpeg')}}"/></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>1995-2000</h4>
+                        <h4 class="subheading">Primeros Años</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Su crecimiento fue complicado, debido a que no
+                        contaba con establecimiento propio y sus ventas fueron duramente afectadas, ya que su inicio
+                        coincidió con el conflicto armado entre Ecuador y Perú de 1995.</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid2" src="{{url_for('static', filename='assets/img/company/fabrica-2.jpeg')}}"/></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2000-2021</h4>
+                        <h4 class="subheading">Crecimiento</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Con trabajo duro y sacrificio logró sobrevivir a
+                        esa crisis, Classic Bun fue creciendo gradual y sostenidamente, gracias a un equipo de personas
+                        comprometidas, realizando 4 cambios de planta y 2 ampliaciones de planta.</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid2" src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}"/></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>1 de Noviembre 2021</h4>
+                        <h4 class="subheading">Nueva Planta</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Actualmente tiene una producción a nivel nacional y sirve a las
+                            principales franquicias del país con énfasis en la calidad, <b> logrando en el 2018 obtener
+                                la certificación FSSC22000, una de las certificaciones más rigurosas en calidad</b></p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        <b>
+                            Se parte
+                            <br/>
+                            de nuestro
+                            <br/>
+                            futuro!</b>
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- Empresa-->
+<section class="page-section" id="business">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading ">¿Para que lo hacemos?</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <h4>Misión</h4>
+                    <p class="text-muted" style="text-align:left">Buscamos apoyar a nuestra clientela en cada nuevo proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es brindar un servicio de calidad, que cubra todas las necesidades de nuestros clientes y proporcione un alto grado de satisfacción mediante los productos que entregamos, siempre fabricados con la más alta calidad.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <h4>Visión</h4>
+                    <p class="text-muted" style="text-align:left">Classic Bun quiere seguir proyectándose como una empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el aliado estratégico número uno de nuestra clientela.</p></div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <h4>Valores Corporativos</h4>
+                    <p class="text-muted" style="text-align:left">Algunos valores que nos destacan son la seriedad, responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y responsabilidad. Estamos siempre enfocados en brindar una atención personalizada con altos estándares de calidad; además estamos orgullosos de nuestra capacidad de producción, con reacción inmediata para cubrir las necesidades de nuestros clientes.</p>
+                </div>
+            </div>
+            </div>
+        <div class="row">
+            <h4>Política de Inocuidad</h4>
+            <p>En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para lograrlo:</p>
+            <ol>
+                <li>Contamos con proveedores calificados</li>
+                <li>Capacitamos constantemente a nuestro personal para que posea las competencias necesarias y éste comprometido con la elaboración y la distribución de alimentos inocuos</li>
+                <li>Tenemos un Sistema de Gestión de Inocuidad Alimentaria FSSC 22000, el cual se revisa constantemente para su mejora continua.</li>
+                <li>Aseguramos una comunicación interna y externa con las partes interesadas</li>
+                <li>Cumplimos con los requisitos legales, reglamentarios y de inocuidad aplicables a nuestros productos y los acordados con nuestros clientes.</li>
+            </ol>
+        </div>
+        </div>
+</section>
+<!-- Contact-->
+<section class="page-section" id="contact"style="background-image:url({{url_for('static',filename='assets/img/products/masa3.jpg')}})">
+    <form class="container">
+        <div class="text-left">
+            <h2 class="section-heading ">Contacto</h2>
+            <h3 class="section-subheading" style="color:white; width:40%">Puede contactarnos a través de nuestros diversos medios de comunicación detallados en el pie de página o puede llenar este formato y nos contactaremos a la brevedad posible..</h3>
+            <a class="btn btn-primary btn-xl " href="{{url_for('contact_form')}}">Formulario de Contacto</a>
+        </div>
+    </form>
+</section>
+<!-- Footer-->
+{% include "footer.html" %}
+</body>
+</html>
