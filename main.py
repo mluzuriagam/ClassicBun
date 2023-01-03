@@ -6,6 +6,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email
 from flask_ckeditor import CKEditor, CKEditorField
 import smtplib
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -15,16 +16,16 @@ Bootstrap(app)
 # notify
 my_mail = "mluzuriagam2@gmail.com"
 rc_mail = ["mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
-my_password = "bcpeobfjdugfazqm"
+my_password = os.environ['google_key']
 
 
 def notify(msg):
     for recipient in rc_mail:
-        with smtplib.SMTP("smtp.gmail.com") as connection:
+        with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(user=my_mail, password=my_password)
             connection.sendmail(from_addr=my_mail, to_addrs=recipient,
-                                msg=f"Subject:Motivational Quote\n\n{msg}")
+                                msg=f"Subject:<b>Alerta Contacto Cliente</b>\n\n{msg}")
 
 
 ##WTForm

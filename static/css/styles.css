@@ -11389,11 +11389,11 @@ p, ol {
     padding-bottom: 0rem;
     border: none;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    background-color: #010204;
   }
   #mainNav:hover {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: white;
   transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav:hover img {
@@ -11409,7 +11409,7 @@ p, ol {
     transition: height 0.3s ease-in-out;
   }
    #mainNav .navbar-nav .nav-item .nav-link {
-    color:black
+    color:white
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;
