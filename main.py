@@ -17,6 +17,7 @@ Bootstrap(app)
 my_mail = "mluzuriagam2@gmail.com"
 rc_mail = ["mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
 my_password = os.environ['google_key']
+print(my_password)
 
 
 def notify(msg):
