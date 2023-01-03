@@ -6,7 +6,7 @@
 <!-- Masthead-->
 <header class="masthead"
         style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image.jpg')}}')">
-    <div class="container">
+    <div >
         <div class="masthead-heading">Classic Bun</div>
         <div class="masthead-subheading">Nuestra calidad, su éxito</div>
         <a class="btn btn-primary btn-xl" href="#products">¿Qué hacemos?</a>
@@ -25,7 +25,7 @@
                 <div>
                     <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/burger.png')}}">
                     <h4 class="my-3">Pan para Hamburguesa</h4>
-                    <p class="text-muted">Pan de hamburguesa diseñado para los clientes más exigentes, con los estándares
+                    <p class="text-muted" style="text-align:justify">Pan de hamburguesa diseñado para los clientes más exigentes, con los estándares
                         más altos de calidad. Capaz de soportar gran cantidad de aderezo sin deshacerse y con los gramajes
                         más altos del mercado</p>
                 </div>
@@ -34,7 +34,7 @@
                 <div>
                     <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/hotdog.png')}}">
                     <h4 class="my-3">Pan para Hot Dog</h4>
-                    <p class="text-muted">Pan de hot dog para todo tamaño de embutido, con la profundidad de corte exacta y
+                    <p class="text-muted" style="text-align:justify">Pan de hot dog para todo tamaño de embutido, con la profundidad de corte exacta y
                         el mejor sabor para realzar su producto.</p>
                 </div>
             </div>
@@ -42,8 +42,7 @@
                 <div>
                     <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/tajapan.png')}}">
                     <h4 class="my-3">Pan para Tajapan</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
-                        architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted" style="text-align:justify">Pan ¨tajapan¨ para de diversos tamaños con y sin borde, con ancho específico por tajada y contenido interior uniforme</p>
                 </div>
             </div>
             </div>
@@ -55,7 +54,7 @@
 </section>
 <!-- Ubicación -->
 <section class="page-section bg-light" id="processes">
-    <div class="container">
+    <div >
         <div class="text-center">
             <h2 class="section-heading ">¿Dónde lo hacemos?</h2>
             <p class="section-subheading text-muted" style="margin-bottom: 0;">En nuestra planta ubicada en <a
@@ -63,16 +62,16 @@
                 capacitados y equipos modernos.</p>
         </div>
         <div class="row">
-            <div class="col-lg-12" style="text-align:center; padding: 2rem">
+            <div class="col-lg-12" style="text-align:justify; padding: 2rem">
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}">
             </div>
-            <div class="col-6 col-lg-4" style="text-align:center; padding: 2rem">
+            <div class="col-6 col-lg-4" style="text-align:justify; padding: 2rem">
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta1.jpg')}}">
             </div>
-            <div class="col-6 col-lg-4" style="text-align:center; padding: 2rem">
+            <div class="col-6 col-lg-4" style="text-align:justify; padding: 2rem">
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta2.jpg')}}">
             </div>
-            <div class="col-6 col-lg-4" style="text-align:center; padding: 2rem">
+            <div class="col-6 col-lg-4" style="text-align:justify; padding: 2rem">
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta3.jpg')}}">
             </div>
         </div>
@@ -80,7 +79,7 @@
 </section>
 <!-- Certificaciones-->
 <section class="page-section" id="certificates">
-    <div class="container">
+    <div >
         <div class="text-center">
             <h2 class="section-heading ">¿Comó garantizamos lo que hacemos?</h2>
             <h3 class="section-subheading text-muted">Contamos con certificaciones que avalan la calidad de nuestros
@@ -92,7 +91,7 @@
                     <img class="mx-auto rounded-circle"
                          src="{{url_for('static', filename='assets/img/certificaciones/BPM.jpg')}}"/>
                     <h4>CERTIFICADO DE BUENAS PRÁCTICAS DE MANUFACTURA CÓDIGO ÚNICO: 0005-HNA-0622</h4>
-                    <p style="text-align:left">"Las Buenas Prácticas de Manufactura es aquella parte del aseguramiento
+                    <p style="text-align:justify">"Las Buenas Prácticas de Manufactura es aquella parte del aseguramiento
                         de la calidad que garantiza que los productos son consistentemente producidos y controlados
                         según los estándares de calidad apropiados para su uso previsto y como lo requiere la
                         autorización de comercialización..."</p>
@@ -106,7 +105,7 @@
                     <img class="mx-auto rounded-circle"
                          src="{{url_for('static', filename='assets/img/certificaciones/FSSC22000.jpg')}}"/>
                     <h4>FSSC 22000</h4>
-                    <p style="text-align:left">"FSSC 22000 ha tenido un impacto en la seguridad alimentaria mundial
+                    <p style="text-align:justify">"FSSC 22000 ha tenido un impacto en la seguridad alimentaria mundial
                         durante más de 12 años. El esquema proporciona un modelo de certificación que se puede utilizar
                         en toda la cadena de suministro de alimentos para garantizar los estándares y procesos de
                         seguridad alimentaria. FSSC 22000 está reconocido por GFSI y sigue la descripción de la
@@ -122,10 +121,10 @@
 </section>
 <!-- Historia-->
 <section class="page-section bg-light" id="about">
-    <div class="container">
+    <div >
         <div class="text-center">
             <h2 class="section-heading ">¿Hace cuantó lo hacemos?</h2>
-            <p class="section-subheading text-muted" style="text-align:left;">José Luzuriaga oriundo de Ibarra, Ecuador,
+            <p class="section-subheading text-muted" style="text-align:justify;">José Luzuriaga oriundo de Ibarra, Ecuador,
                 en el momento en el que finalizaba sus estudios preparó como proyecto de tesis un estudio de
                 factibilidad de una panificadora dedicada a la producción de pan para franquicias.<br> Simultáneamente
                 Burger King se buscaba establecer en Quito, franquicia que requería de una panificadora con
@@ -201,7 +200,7 @@
 </section>
 <!-- Empresa-->
 <section class="page-section" id="business">
-    <div class="container">
+    <div >
         <div class="text-center">
             <h2 class="section-heading ">¿Para que lo hacemos?</h2>
         </div>
@@ -209,37 +208,37 @@
             <div class="col-lg-4">
                 <div class="team-member">
                     <h4>Misión</h4>
-                    <p class="text-muted" style="text-align:left">Buscamos apoyar a nuestra clientela en cada nuevo proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es brindar un servicio de calidad, que cubra todas las necesidades de nuestros clientes y proporcione un alto grado de satisfacción mediante los productos que entregamos, siempre fabricados con la más alta calidad.</p>
+                    <p class="text-muted" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada nuevo proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es brindar un servicio de calidad, que cubra todas las necesidades de nuestros clientes y proporcione un alto grado de satisfacción mediante los productos que entregamos, siempre fabricados con la más alta calidad.</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="team-member">
                     <h4>Visión</h4>
-                    <p class="text-muted" style="text-align:left">Classic Bun quiere seguir proyectándose como una empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el aliado estratégico número uno de nuestra clientela.</p></div>
+                    <p class="text-muted" style="text-align:justify">Classic Bun quiere seguir proyectándose como una empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el aliado estratégico número uno de nuestra clientela.</p></div>
             </div>
             <div class="col-lg-4">
                 <div class="team-member">
                     <h4>Valores Corporativos</h4>
-                    <p class="text-muted" style="text-align:left">Algunos valores que nos destacan son la seriedad, responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y responsabilidad. Estamos siempre enfocados en brindar una atención personalizada con altos estándares de calidad; además estamos orgullosos de nuestra capacidad de producción, con reacción inmediata para cubrir las necesidades de nuestros clientes.</p>
+                    <p class="text-muted" style="text-align:justify">Algunos valores que nos destacan son la seriedad, responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y responsabilidad. Estamos siempre enfocados en brindar una atención personalizada con altos estándares de calidad; además estamos orgullosos de nuestra capacidad de producción, con reacción inmediata para cubrir las necesidades de nuestros clientes.</p>
                 </div>
             </div>
             </div>
         <div class="row">
             <h4>Política de Inocuidad</h4>
-            <p>En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para lograrlo:</p>
-            <ol>
+            <p class="text-muted">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para lograrlo:</p>
+            <ol class="text-muted">
                 <li>Contamos con proveedores calificados</li>
                 <li>Capacitamos constantemente a nuestro personal para que posea las competencias necesarias y éste comprometido con la elaboración y la distribución de alimentos inocuos</li>
                 <li>Tenemos un Sistema de Gestión de Inocuidad Alimentaria FSSC 22000, el cual se revisa constantemente para su mejora continua.</li>
                 <li>Aseguramos una comunicación interna y externa con las partes interesadas</li>
                 <li>Cumplimos con los requisitos legales, reglamentarios y de inocuidad aplicables a nuestros productos y los acordados con nuestros clientes.</li>
-            </ol>
+            </ol class="text-muted">
         </div>
         </div>
 </section>
 <!-- Contact-->
 <section class="page-section" id="contact"style="background-image:url({{url_for('static',filename='assets/img/products/masa3.jpg')}})">
-    <form class="container">
+    <form >
         <div class="text-left">
             <h2 class="section-heading ">Contacto</h2>
             <h3 class="section-subheading" style="color:white; width:40%">Puede contactarnos a través de nuestros diversos medios de comunicación detallados en el pie de página o puede llenar este formato y nos contactaremos a la brevedad posible..</h3>
