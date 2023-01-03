@@ -17,7 +17,6 @@ Bootstrap(app)
 my_mail = "mluzuriagam2@gmail.com"
 rc_mail = ["mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
 my_password = os.environ['google_key']
-print(my_password)
 
 
 def notify(msg):
@@ -27,6 +26,7 @@ def notify(msg):
             connection.login(user=my_mail, password=my_password)
             connection.sendmail(from_addr=my_mail, to_addrs=recipient,
                                 msg=f"Subject:<b>Alerta Contacto Cliente</b>\n\n{msg}")
+    print("Email sent successfully")
 
 
 ##WTForm
