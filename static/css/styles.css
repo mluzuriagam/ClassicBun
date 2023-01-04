@@ -11458,7 +11458,7 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  height:fit-content;
+  height:100vh;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
