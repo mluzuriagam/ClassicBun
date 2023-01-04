@@ -11831,10 +11831,15 @@ section#contact form#contactForm :-ms-input-placeholder {
  padding-left:0.25rem;
  padding-right:0.25rem;
 }
+.contacto-width{width:100%
+}
 @media (min-width: 768px) {
  .img-fluid3 {
  padding-top:2rem;
  padding-bottom:2rem;
  padding-left:1rem;
  padding-right:1rem;
+}
+.contacto-width{width:40%
+}
 }
