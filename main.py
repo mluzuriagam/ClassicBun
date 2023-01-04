@@ -1,16 +1,16 @@
 import smtplib
+
+import requests
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email
-from flask_ckeditor import CKEditor, CKEditorField
 import smtplib
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-ckeditor = CKEditor(app)
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 Bootstrap(app)
 
 # notify
@@ -26,7 +26,6 @@ def notify(msg):
             connection.login(user=my_mail, password=my_password)
             connection.sendmail(from_addr=my_mail, to_addrs=recipient,
                                 msg=f"Subject:<b>Alerta Contacto Cliente</b>\n\n{msg}")
-    print("Email sent successfully")
 
 
 ##WTForm
@@ -35,27 +34,53 @@ class CreatePostForm(FlaskForm):
     email = StringField("Correo",
                         validators=[DataRequired("Debe incluir este campo"), Email("Correo de formato invalido")])
     phone = StringField("Teléfono(Opcional)")
-    body = CKEditorField("Mensaje", validators=[DataRequired("Debe incluir este campo")])
+    body = StringField("Mensaje", validators=[DataRequired("Debe incluir este campo")])
     submit = SubmitField("Submit Post")
 
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", success=True)
+
+
+@app.route("/<success>")
+def index2(success):
+    print(success)
+    return render_template("index.html", success=success)
 
 
 @app.route("/form", methods=["GET", "POST"])
 def contact_form():
     form = CreatePostForm()
     if form.validate_on_submit():
-        msg = f"Nombre:{form.data['name']}\nEmail:{form.data['email']}\nTeléfono:{form.data['phone']}\nMensaje:{form.data['body']}\n"
-        print(msg)
+        msg = f"Nombre: {form.data['name']} /" \
+              f"Email: {form.data['email']} / " \
+              f"Celular: {form.data['phone']} / " \
+              f"Mensaje: {form.data['body']}"
         try:
-            notify(msg)
-            return redirect(url_for("index"))
+            print("Trying")
+            for recipient in rc_mail:
+                with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
+                    connection.starttls()
+                    connection.login(user=my_mail, password=my_password)
+                    connection.sendmail(from_addr=my_mail, to_addrs=recipient,
+                                        msg=f"Subject:Alerta Contacto Cliente\n\n{msg.encode('utf-8')}")
+            print("Success")
+            return redirect(url_for("index2", success="True"))
         except:
-            pass
-            return redirect(url_for("index"))
+            try:
+                print("Trying to sent alert")
+                for recipient in rc_mail:
+                    with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
+                        connection.starttls()
+                        connection.login(user=my_mail, password=my_password)
+                        connection.sendmail(from_addr=my_mail, to_addrs=recipient,
+                                            msg=f"Subject:Alerta Error Pagina\n\nError en formulario de envio")
+                print("Success sending alert")
+                return redirect(url_for("index2", success="False"))
+            except:
+                print("No Success")
+                return redirect(url_for("index2", success="False"))
     return render_template("form.html", form=form)
 
 

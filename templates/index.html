@@ -3,6 +3,12 @@
 {% import "bootstrap/wtf.html" as wtf %}
 <html lang="es">
 <body>
+<!-- Aviso de Error-->
+        {% if  success=="False": %}
+<div class="container" style="padding-top:3rem">
+    <p style="color:red">Error en envío, por favor use otro medio de comunicación</p>
+</div>
+        {% endif %}
 <!-- Masthead-->
 <header class="masthead"
         style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image.jpg')}}')">
@@ -48,7 +54,7 @@
             </div>
         <div class="text-center">
             <br>
-            <h3 class="text-center"><a href="{{ url_for('static', filename='assets/pdf/Classic_bun.pdf')}}">Catalogo completo</a></h3>
+            <h3 class="text-center"><a href="{{ url_for('static', filename='assets/pdf/Classic_bun.pdf')}}">Catálogo completo</a></h3>
         </div>
 
 </section>
@@ -232,7 +238,7 @@
                 <li>Tenemos un Sistema de Gestión de Inocuidad Alimentaria FSSC 22000, el cual se revisa constantemente para su mejora continua.</li>
                 <li>Aseguramos una comunicación interna y externa con las partes interesadas</li>
                 <li>Cumplimos con los requisitos legales, reglamentarios y de inocuidad aplicables a nuestros productos y los acordados con nuestros clientes.</li>
-            </ol class="text-muted">
+            </ol>
         </div>
         </div>
 </section>
@@ -248,5 +254,6 @@
 </section>
 <!-- Footer-->
 {% include "footer.html" %}
+</div>
 </body>
 </html>

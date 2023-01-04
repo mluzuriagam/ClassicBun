@@ -1,14 +1,51 @@
 {% import "bootstrap/wtf.html" as wtf %}
-<div class="container">
-    {% include "headers.html" %}
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="author" content="ClassicBun"/>
+    <title>Classic Bun</title>
+    <!-- Favicon-->
+    <link rel="icon" href="{{ url_for('static', filename='assets/img/general/favicon.ico')}}"/>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <!-- Font Philosopher -->
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet" type="text/css">
+    <!-- Font Source Sans Pro (Similar to Gill Sans ) -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600;700&display=swap" rel="stylesheet" type="text/css">
+    <!-- CSS includes Bootstrap-->
+    <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet"/>
+</head>
+<body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom" id="mainNav2">
+            <div class="container">
+                <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='assets/img/company/small-logo.png')}}"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#processes">Ubicación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#business">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 <div class="container" style="padding-top:7rem">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            {{ ckeditor.load() }}
-            {{ ckeditor.config(name='body') }}
+            <p>Por favor, de preferencia no usar caracteres especiales, ej. á,ñ,é,...</p>
             {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
         </div>
     </div>
 </div>
+</body>
 {% include "footer.html" %}
