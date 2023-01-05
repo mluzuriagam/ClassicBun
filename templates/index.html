@@ -4,7 +4,6 @@
 <html lang="es">
 <body>
 <!-- Navigation-->
-
 <nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="#page-top"><img
@@ -17,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#processes">Ubicación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#processes">Ubicación/Equipo</a></li>
                 <li class="nav-item"><a class="nav-link" href="#certificates">Certificaciones</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">Historia</a></li>
                 <li class="nav-item"><a class="nav-link" href="#business">Empresa</a></li>
@@ -34,55 +33,81 @@
 {% endif %}
 <!-- Masthead-->
 <header class="masthead"
-        style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image.jpg')}}')"
+        style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image-2.jpg')}}')"
         id="page-top">
-    <div>
-        <div class="masthead-heading">Classic Bun</div>
-        <div class="masthead-subheading">Nuestra calidad, su éxito</div>
+        <img class="masthead-subheading img-fluid-4" src="{{ url_for('static', filename='assets/img/company/big-logo.png')}}">
+    <br>
         <a class="btn btn-primary btn-xl" href="#products">¿Qué hacemos?</a>
-    </div>
 </header>
 <!-- Productos-->
 <section class="page-section" id="products">
     <div class="text-center">
         <h2 class="section-heading ">¿Qué hacemos?</h2>
-        <p class="section-subheading text-muted">Nuestro producto está basado en los requerimientos de cada cliente,
-            guardando la delicadeza de su sabor, frescura y textura clásicos de nuestra marca. </p>
-        <p>Nuestros principales productos:</p>
+        <p class="section-subheading text-muted">Hacemos pan basado en los requerimientos de cada cliente,
+            guardando la delicadeza de su sabor, frescura y textura que caracterizan nuestra marca, con los estándares
+            más altos de calidad.</p>
+    </div>
+    <div class="text-center">
+        <a class="btn btn-primary btn-xl text-center"
+           href="{{ url_for('static', filename='assets/pdf/Classic_bun.pdf')}}">Descargue aquí nuestro catálogo completo
+            de productos</a>
+    </div>
+    <div class="row text-left text-muted product-characteristics" style="margin:0 auto">
+        <div class="col-lg-6 sm-12">
+            <ul>
+                <li>Diversos tamaños y gramajes</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 sm-12">
+            <ul>
+                <li>Cortado o sin cortar</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 sm-12">
+            <ul>
+                <li>Formulación personalizada</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 sm-12">
+            <ul>
+                <li>Decorados con:</li>
+                <div class="row">
+                    <div class="col-lg-6 sm-12">
+                        <ul>
+                            <li>Ajonjolí/ajonjolí negro</li>
+                            <li>Parmesano</li>
+                            <li>Orégano</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 sm-12">
+                        <ul>
+                            <li>Polenta</li>
+                            <li>Brillo</li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
     </div>
     <div class="row text-center">
         <div class="col-lg-4 md-6 sm-12">
             <div>
                 <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/burger.png')}}">
                 <h4 class="my-3">Pan para Hamburguesa</h4>
-                <p class="text-muted" style="text-align:justify">Pan de hamburguesa diseñado para los clientes más
-                    exigentes, con los estándares
-                    más altos de calidad. Capaz de soportar gran cantidad de aderezo sin deshacerse y con los gramajes
-                    más altos del mercado</p>
             </div>
         </div>
         <div class="col-lg-4 md-6 sm-12">
             <div>
                 <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/hotdog.png')}}">
                 <h4 class="my-3">Pan para Hot Dog</h4>
-                <p class="text-muted" style="text-align:justify">Pan de hot dog para todo tamaño de embutido, con la
-                    profundidad de corte exacta y
-                    el mejor sabor para realzar su producto.</p>
             </div>
         </div>
         <div class="col-lg-4 md-6 sm-12">
             <div>
                 <img class="img-fluid" src="{{ url_for('static', filename='assets/img/products/tajapan.png')}}">
-                <h4 class="my-3">Pan para Tajapan</h4>
-                <p class="text-muted" style="text-align:justify">Pan ¨tajapan¨ para de diversos tamaños con y sin borde,
-                    con ancho específico por tajada y contenido interior uniforme</p>
+                <h4 class="my-3">Pan Tajapan</h4>
             </div>
         </div>
-    </div>
-    <div class="text-center">
-        <br>
-        <p class="text-center"><a href="{{ url_for('static', filename='assets/pdf/Classic_bun.pdf')}}">Catálogo
-            completo</a></p>
     </div>
 
 </section>
@@ -92,14 +117,15 @@
         <div class="text-center">
             <h2 class="section-heading ">¿Dónde lo hacemos?</h2>
             <p class="section-subheading text-muted" style="margin-bottom: 0;">En nuestra planta ubicada en <a
-                    href="https://goo.gl/maps/rtczU8wege8oPRjP8">Santa Teresa de Jesús OE 10-B (Quito,Ecuador)</a> junto
-                con un gran equipo de colaboradores
-                capacitados y equipos modernos.</p>
+                    href="https://goo.gl/maps/rtczU8wege8oPRjP8">Santa Teresa de Jesús OE 10-B (Quito,Ecuador)</a></p>
+            <img style="width:100%" src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}">
+        </div>
+        <div class="text-center">
+            <h2 class="section-heading" style="padding-top:1rem">¿Y quién lo hace? </h2>
+            <p class="section-subheading text-muted" style="margin-bottom: 0;">Un comprometido equipo de
+                capacitados colaboradores.</p>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-12 img-fluid3">
-                <img style="width:100%" src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}">
-            </div>
             <div class="col-6 col-lg-4 img-fluid3">
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta1.jpg')}}">
             </div>
@@ -124,21 +150,29 @@
             <div class="col-lg-6">
                 <div class="team-member">
                     <a href="{{url_for('static', filename='assets/pdf/BPM.pdf')}}"><img class="mx-auto rounded-circle"
-                         src="{{url_for('static', filename='assets/img/certificaciones/BPM.jpg')}}"/></a>
+                                                                                        src="{{url_for('static', filename='assets/img/certificaciones/BPM.jpg')}}"/></a>
+                    <p style="text-align:center; font-size:0.75rem">Click en la imagen para descargar</p>
                     <h4>CERTIFICADO DE BUENAS PRÁCTICAS DE MANUFACTURA CÓDIGO ÚNICO: 0005-HNA-0622</h4>
-                    <p style="text-align:justify">"Las Buenas Prácticas de Manufactura es aquella parte del
-                        aseguramiento
-                        de la calidad que garantiza que los productos son consistentemente producidos y controlados
-                        según los estándares de calidad apropiados para su uso previsto y como lo requiere la
-                        autorización de comercialización..."</p>
-                    <p style="text-align:right">ARCSA,<a href="https://www.controlsanitario.gob.ec">Link info</a></p>
+                    <p style="text-align:justify">"Art. 1.- Objeto.- la presente normativa técnica sanitaria establece
+                        las condiciones higiénico sanitarias y requisitos que deberán cumplir los procesos de
+                        fabricación, producción, elaboración, preparación, envasado, empacado transporte y
+                        comercialización de alimentos para consumo humano, al igual que los requisitos para la obtención
+                        de la notificación sanitaria de alimentos procesados nacionales y extranjeros según el
+                        perfilador de riesgos, con el objeto de proteger la salud de la población, garantizar el
+                        suministro de productos sanos e inocuos."</p>
+                    <p style="text-align:right">ARCSA,<a
+                            href="https://www.controlsanitario.gob.ec/wp-content/uploads/downloads/2015/12/Resolucion_ARCSA-DE-067-2015-GGG.pdf">Link
+                        info</a></p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="team-member">
-                    <a href="{{url_for('static', filename='assets/pdf/FSSC22000.pdf')}}"><img class="mx-auto rounded-circle"
-                                                                                              src="{{url_for('static', filename='assets/img/certificaciones/FSSC22000.jpg')}}"/></a>
+                    <a href="{{url_for('static', filename='assets/pdf/FSSC22000.pdf')}}"><img
+                            class="mx-auto rounded-circle"
+                            src="{{url_for('static', filename='assets/img/certificaciones/FSSC22000.jpg')}}"/></a>
+                    <p style="text-align:center; font-size:0.75rem">Click en la imagen para descargar</p>
                     <h4>FSSC 22000</h4>
+                    <h4></h4>
                     <p style="text-align:justify">"FSSC 22000 ha tenido un impacto en la seguridad alimentaria mundial
                         durante más de 12 años. El esquema proporciona un modelo de certificación que se puede utilizar
                         en toda la cadena de suministro de alimentos para garantizar los estándares y procesos de
@@ -156,87 +190,114 @@
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Hace cuantó lo hacemos?</h2>
-            <p class="section-subheading text-muted" style="text-align:justify;">José Luzuriaga oriundo de Ibarra,
-                Ecuador,
-                en el momento en el que finalizaba sus estudios preparó como proyecto de tesis un estudio de
-                factibilidad de una panificadora dedicada a la producción de pan para franquicias.<br> Simultáneamente
-                Burger King se buscaba establecer en Quito, franquicia que requería de una panificadora con
-                características similares a las planteadas en su tesis. La franquicia se encontró con el problema que
-                ninguna panificadora en Quito le podía ofrecer pan cortado.</p>
+            <p class="section-subheading text-muted" style="text-align:justify;">Classic Bun es un gran sueño que inició
+                hace 30 años, en ese entonces, José Luzuriaga Rosales finalizaba su carrera universitaria y para esto
+                preparó como proyecto de tesis un estudio de factibilidad para la implementación de una panificadora
+                enfocada a la producción de pan para franquicias. Simultáneamente una transnacional buscaba abrir su
+                primer restaurante en Quito y no encontró en el mercado una panadería que cumpla con sus requerimientos,
+                entre estos, que el pan debería venir cortado para facilitar sus procesos de elaboración de hamburguesas
+                como era la norma en otras localidades donde la franquicia trabajaba.</p>
+            <br>
+            <p class="section-subheading text-muted" style="text-align:justify;">José y su esposa Elizabeth Merlo
+                deciden apostar por este sueño con el apoyo de sus Padres y la venta de su casa para la compra de
+                maquinaria. Como todo proyecto su inicio fue complicado, entre otras cosas debido a que la empresa no
+                contaba con un establecimiento propio, además de factores externos como el conflicto armado entre
+                Ecuador y Perú de 1995. Sin embargo, con trabajo duro, sacrificio, constancia, y la colaboración
+                decidida de un grupo de trabajo comprometido, logró salir adelante y ha venido creciendo de forma
+                paulatina a lo largo de todos estos años.</p>
             <br>
         </div>
-        <ul class="timeline">
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid2"
-                                                 src="{{url_for('static', filename='assets/img/about/soil.jpg')}}"/>
-                </div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>10 de junio de 1995</h4>
-                        <h4 class="subheading">Nuestros Inicios</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">José Luzuriaga aficionado a la mecánica decidió
-                        desarrollar una máquina que pueda realizar este corte, iniciando una panificadora para proveer
-                        de producto a la franquicia naciendo así la Panificadora Classic Bun.</p></div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid2"
-                                                 src="{{url_for('static', filename='assets/img/company/fabrica-1.jpeg')}}"/>
-                </div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>1995-2000</h4>
-                        <h4 class="subheading">Primeros Años</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">Su crecimiento fue complicado, debido a que no
-                        contaba con establecimiento propio y sus ventas fueron duramente afectadas, ya que su inicio
-                        coincidió con el conflicto armado entre Ecuador y Perú de 1995.</p></div>
-                </div>
-            </li>
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid2"
-                                                 src="{{url_for('static', filename='assets/img/company/fabrica-2.jpeg')}}"/>
-                </div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2000-2021</h4>
-                        <h4 class="subheading">Crecimiento</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">Con trabajo duro y sacrificio logró sobrevivir a
-                        esa crisis, Classic Bun fue creciendo gradual y sostenidamente, gracias a un equipo de personas
-                        comprometidas, realizando 4 cambios de planta y 2 ampliaciones de planta.</p></div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid2"
-                                                 src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}"/>
-                </div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>1 de Noviembre 2021</h4>
-                        <h4 class="subheading">Nueva Planta</h4>
-                    </div>
-                    <div class="timeline-body">
-                        <p class="text-muted">Actualmente tiene una producción a nivel nacional y sirve a las
-                            principales franquicias del país con énfasis en la calidad, <b> logrando en el 2018 obtener
-                                la certificación FSSC22000, una de las certificaciones más rigurosas en calidad</b></p>
-                    </div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image">
-                    <h4>
-                        <b>
-                            Se parte
-                            <br/>
-                            de nuestro
-                            <br/>
-                            futuro!</b>
-                    </h4>
-                </div>
-            </li>
-        </ul>
+        <!-- Historia Ampliada-->
+        <div class="text-center">
+            <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample">
+                Conoce aquí nuestros siguientes pasos...
+            </a>
+        </div>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid2"
+                                                         src="{{url_for('static', filename='assets/img/about/soil.jpg')}}"/>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>10 de junio de 1995</h4>
+                                <h4 class="subheading">Nuestros Inicios</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">José Luzuriaga aficionado a la mecánica
+                                diseño un prototipo que pueda realizar este corte y al lograrlo con éxito empezó a
+                                cristalizar su proyecto para proveer de producto a la franquicia, naciendo así la
+                                Panificadora Classic Bun el 10 de junio de 1995 en la calle Bolivia y Eustorgio Salgado
+                                en un local de 150 metros cuadrados.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid2"
+                                                         src="{{url_for('static', filename='assets/img/company/fabrica-1.jpeg')}}"/>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>1995-2000</h4>
+                                <h4 class="subheading">Primeros Años</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Aún en 1995, se realiza el primer cambio de
+                                local a la calle Inglaterra y Vancouver donde permanece por 2 años hasta 1997, año en
+                                que se inició la construcción de una planta propia en la calle Pedro Guerrero y Avenida
+                                de las Anonas. Esta fue su sede durante 20 años, tiempo durante el cual se realizaron 2
+                                remodelaciones que permitieron el crecimiento constante de la empresa.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid2"
+                                                         src="{{url_for('static', filename='assets/img/company/fabrica-2.jpeg')}}"/>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2000-2020</h4>
+                                <h4 class="subheading">Crecimiento</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted"><b>Para el 2018, Classic Bun ya cuenta con
+                                la certificación en seguridad alimentaria FSSC22000</b>, trabaja con las principales
+                                franquicias y restaurantes de comida rápida del país, y mantiene con énfasis el lema con
+                                el que nació: ¨Nuestra calidad, su éxito¨.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid2"
+                                                         src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}"/>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2020-Actualidad</h4>
+                                <h4 class="subheading">Nueva Planta</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">A finales del 2019, el hijo mayor de la familia, José Miguel
+                                    Luzuriaga Merlo se une al equipo de trabajo con el objetivo de hacer crecer el
+                                    proyecto de sus padres y con su perseverancia dio origen a un nuevo sueño que salió
+                                    a flote a pesar de la pandemia del COVID 19. En contra de todo pronóstico el sueño
+                                    se logró convertir en realidad dando origen a la nueva y moderna planta ubicada en
+                                    la calle <b>Santa Teresa de Jesús y Panamericana Norte.</b></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                <b>
+                                    Se parte
+                                    <br/>
+                                    de nuestro
+                                    <br/>
+                                    futuro!</b>
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 <!-- Empresa-->
@@ -297,20 +358,25 @@
     </div>
 </section>
 <!-- Contact-->
-<section class="page-section" id="contact"
-         style="background-image:url({{url_for('static',filename='assets/img/products/masa3.jpg')}})">
-    <form>
-        <div class="text-left">
-            <h2 class="section-heading ">Contacto</h2>
-            <p class="section-subheading contacto-width" style="color:white">Puede contactarnos a través de nuestros
-                diversos medios de comunicación detallados en el pie de página o puede llenar este formato y nos
-                contactaremos a la brevedad posible..</p>
-            <a class="btn btn-primary btn-xl " href="{{url_for('contact_form')}}">Formulario de Contacto</a>
-        </div>
-    </form>
-</section>
+<header class="masthead"
+        style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image-3.jpg')}}')"
+        id="contact">
+    <div class="text-left">
+        <h2 class="section-heading ">Contacto</h2>
+        <p class="section-subheading contacto-width">Puede contactarnos a través de nuestros
+            diversos medios de comunicación detallados en el pie de página o puede llenar este formato y nos
+            contactaremos a la brevedad posible..</p>
+        <a class="btn btn-primary btn-xl " href="{{url_for('contact_form')}}">Formulario de Contacto</a>
+    </div>
+</header>
+<!--Whatsapp-->
+<div class="fixed-bottom"
+     style="background-color:transparent; margin-bottom:10vh ;margin-right:20vh; text-align: right">
+    <a class="btn btn-dark btn-social mx-2" href="https://api.whatsapp.com/send/?phone=593997183684">
+        <i class="fa-brands fa-whatsapp fa-3x" style="width:70%;height:70%;"></i>
+    </a>
+</div>
 <!-- Footer-->
 {% include "footer.html" %}
-</div>
 </body>
 </html>

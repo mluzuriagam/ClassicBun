@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#processes">Ubicación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#processes">Ubicación/Equipo</a></li>
                         <li class="nav-item"><a class="nav-link" href="#certificates">Certificaciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Historia</a></li>
                         <li class="nav-item"><a class="nav-link" href="#business">Empresa</a></li>
@@ -39,14 +39,21 @@
                 </div>
             </div>
         </nav>
+        <!--Contacto-->
 <div class="container" style="padding-top:7rem">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             <p>Formulario de contacto</p>
-            <p style="color:red; text-align:center">Por favor, de preferencia no usar caracteres especiales, ej. á,ñ,é,...</p>
             {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
         </div>
     </div>
+</div>
+<!--Whatsapp-->
+<div class="fixed-bottom"
+     style="background-color:transparent; margin-bottom:10vh ;margin-right:20vh; text-align: right">
+    <a class="btn btn-dark btn-social mx-2" href="https://api.whatsapp.com/send/?phone=593997183684">
+        <i class="fa-brands fa-whatsapp fa-3x" style="width:70%;height:70%;"></i>
+    </a>
 </div>
 </body>
 {% include "footer.html" %}
