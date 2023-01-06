@@ -11340,8 +11340,9 @@ body {
   margin-bottom:1rem;
 }
 @media (min-width: 768px){
+.btn-xl {
     width:30%;
-}
+}}
 .btn-social {
   height: fit-content;
   width: fit-content;
