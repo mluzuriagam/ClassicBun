@@ -3092,8 +3092,8 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #fff;
-  background-color: #198754;
-  border-color: #198754;
+  background-color: #25D366;
+  border-color: #25D366;
 }
 .btn-success:hover {
   color: #fff;
@@ -11339,13 +11339,15 @@ body {
   font-weight: 700;
   margin-bottom:1rem;
 }
+@media @media (min-width: 768px){
+    width:30%;
+}
 .btn-social {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: fit-content;
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   border-radius: 100%;
 }
 @media (min-width: 768px){
@@ -11357,9 +11359,8 @@ body {
 
 
 #mainNav, #mainNav2 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: transparent;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
 }
 #mainNav .navbar-toggler, #mainNav2 .navbar-toggler {
@@ -11377,7 +11378,7 @@ body {
   text-transform: uppercase;
 }
 #mainNav .navbar-brand img, #mainNav2 .navbar-brand img {
-  height: 2rem;
+  height: 0rem;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link, #mainNav2 .navbar-nav .nav-item .nav-link {
@@ -11393,13 +11394,18 @@ body {
     background-color: white;
   }
 
+#mainNav.navbar-shrink .navbar-brand img {
+    height: 2rem;
+  }
+.navbar-color{
+background-color:white;
+}
 @media (min-width: 768px) {
   #mainNav {
     padding-top: 0rem;
     padding-bottom: 0rem;
     border: none;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-    background-color: transparent;
   }
     #mainNav2 {
     padding-top: 0rem;
@@ -11423,7 +11429,7 @@ body {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img,#mainNav2 .navbar-brand img {
-    height: 2rem;
+    height: 0rem;
     transition: height 0.3s ease-in-out;
   }
   #mainNav2 .navbar-brand img {
@@ -11492,7 +11498,7 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 7rem;
+    padding-top: 5rem;
     text-align:left;
     height:100vh;
   }
