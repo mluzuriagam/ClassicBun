@@ -47,9 +47,22 @@ window.addEventListener('DOMContentLoaded', event => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
+                responsiveNavColor();
             }
         });
     });
-
+    var on=0
+    const navbarCollapsible = document.body.querySelector('#mainNav');
+    function responsiveNavColor(){
+        if(on===0){
+        navbarCollapsible.classList.add('navbar-color');
+        on=1;
+        }
+        else{
+        navbarCollapsible.classList.remove('navbar-color')
+        on=0;
+        }
+    };
+    navbarToggler.addEventListener('click', responsiveNavColor);
 });
 
