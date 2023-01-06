@@ -35,9 +35,10 @@
 <header class="masthead"
         style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image-2-2.jpg')}}')"
         id="page-top">
-        <img class="masthead-subheading img-fluid-4" src="{{ url_for('static', filename='assets/img/company/big-logo.png')}}">
-        <br>
-        <a class="btn btn-primary btn-xl" href="#products">¿Qué hacemos?</a>
+    <img class="masthead-subheading img-fluid-4"
+         src="{{ url_for('static', filename='assets/img/company/big-logo.png')}}">
+    <br>
+    <a class="btn btn-primary btn-xl" href="#products">¿Qué hacemos?</a>
 </header>
 <!-- Productos-->
 <section class="page-section" id="products">
@@ -198,24 +199,23 @@
                 entre estos, que el pan debería venir cortado para facilitar sus procesos de elaboración de hamburguesas
                 como era la norma en otras localidades donde la franquicia trabajaba.</p>
             <br>
-            <p class="section-subheading text-muted" style="text-align:justify;">José y su esposa Elizabeth Merlo
+        </div>
+        <!-- Historia Ampliada-->
+        <div class="text-center">
+            <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample">
+                Sigue nuestra historia aquí...
+            </a>
+        </div>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <p class="section-subheading text-muted" style="text-align:justify;">José y su esposa Elizabeth Merlo
                 deciden apostar por este sueño con el apoyo de sus Padres y la venta de su casa para la compra de
                 maquinaria. Como todo proyecto su inicio fue complicado, entre otras cosas debido a que la empresa no
                 contaba con un establecimiento propio, además de factores externos como el conflicto armado entre
                 Ecuador y Perú de 1995. Sin embargo, con trabajo duro, sacrificio, constancia, y la colaboración
                 decidida de un grupo de trabajo comprometido, logró salir adelante y ha venido creciendo de forma
                 paulatina a lo largo de todos estos años.</p>
-            <br>
-        </div>
-        <!-- Historia Ampliada-->
-        <div class="text-center">
-            <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#collapseExample" role="button"
-               aria-expanded="false" aria-controls="collapseExample">
-                Conoce aquí nuestros siguientes pasos...
-            </a>
-        </div>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid2"
