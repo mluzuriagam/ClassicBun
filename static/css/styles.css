@@ -11339,7 +11339,7 @@ body {
   font-weight: 700;
   margin-bottom:1rem;
 }
-@media @media (min-width: 768px){
+@media (min-width: 768px){
     width:30%;
 }
 .btn-social {
