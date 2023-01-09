@@ -11338,6 +11338,7 @@ body {
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom:1rem;
+  width:100%;
 }
 @media (min-width: 768px){
 .btn-xl {
