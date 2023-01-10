@@ -126,7 +126,6 @@
             <p class="section-subheading text-muted" style="margin-bottom: 0;">Un comprometido equipo de
                 capacitados colaboradores.</p>
         </div>
-        <div>
         <div class="row justify-content-center" style="margin:auto">
             <div class="col-6 col-lg-4 img-fluid3">
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta1.jpg')}}">
@@ -138,6 +137,9 @@
                 <img style="width:100%" src="{{url_for('static', filename='assets/img/company/planta3.jpg')}}">
             </div>
         </div>
+        <div class="text-center">
+            <p class="section-subheading text-muted" style="margin-bottom: 0;"><a href="{{url_for('work_with_us')}}">Únete
+                a nuestro equipo!</a></p>
         </div>
     </div>
 </section>
@@ -346,14 +348,14 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <h4>
+                            <h4><a href="{{url_for('work_with_us')}}" style="color:black">
                                 <b>
                                     Se parte
                                     <br/>
                                     de nuestro
                                     <br/>
                                     futuro!</b>
-                            </h4>
+                            </a></h4>
                         </div>
                     </li>
                 </ul>
@@ -375,11 +377,11 @@
         </div>
         <div class="collapse" id="mision">
             <div class="card card-body">
-            <p class="text-muted" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada
-                nuevo proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es
-                brindar un servicio de calidad, que cubra todas las necesidades de nuestros clientes y proporcione
-                un alto grado de satisfacción mediante los productos que entregamos, siempre fabricados con la
-                más alta calidad.</p></div>
+                <p class="text-muted" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada
+                    nuevo proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es
+                    brindar un servicio de calidad, que cubra todas las necesidades de nuestros clientes y proporcione
+                    un alto grado de satisfacción mediante los productos que entregamos, siempre fabricados con la
+                    más alta calidad.</p></div>
         </div>
         <div class="text-center">
             <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#vision" role="button"
@@ -389,10 +391,10 @@
         </div>
         <div class="collapse" id="vision">
             <div class="card card-body">
-            <p class="text-muted" style="text-align:justify">Classic Bun quiere seguir proyectándose como
-                una empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio
-                personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el
-                aliado estratégico número uno de nuestra clientela.</p></div>
+                <p class="text-muted" style="text-align:justify">Classic Bun quiere seguir proyectándose como
+                    una empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio
+                    personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el
+                    aliado estratégico número uno de nuestra clientela.</p></div>
         </div>
         <div class="text-center">
             <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#values" role="button"
@@ -402,11 +404,12 @@
         </div>
         <div class="collapse" id="values">
             <div class="card card-body">
-            <p class="text-muted" style="text-align:justify">Algunos valores que nos destacan son la
-                seriedad, responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y
-                responsabilidad. Estamos siempre enfocados en brindar una atención personalizada con altos estándares de
-                calidad; además estamos orgullosos de nuestra capacidad de producción, con reacción inmediata para
-                cubrir las necesidades de nuestros clientes.</p></div>
+                <p class="text-muted" style="text-align:justify">Algunos valores que nos destacan son la
+                    seriedad, responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y
+                    responsabilidad. Estamos siempre enfocados en brindar una atención personalizada con altos
+                    estándares de
+                    calidad; además estamos orgullosos de nuestra capacidad de producción, con reacción inmediata para
+                    cubrir las necesidades de nuestros clientes.</p></div>
         </div>
         <div class="text-center">
             <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#inocuidad" role="button"
@@ -416,24 +419,25 @@
         </div>
         <div class="collapse" id="inocuidad">
             <div class="card card-body">
-            <p class="text-muted">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan
-                garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para
-                lograrlo:</p>
-            <ol class="text-muted">
-                <li>Contamos con proveedores calificados</li>
-                <li>Capacitamos constantemente a nuestro personal para que posea las competencias necesarias y éste
-                    comprometido con la elaboración y la distribución de alimentos inocuos
-                </li>
-                <li>Tenemos un Sistema de Gestión de Inocuidad Alimentaria FSSC 22000, el cual se revisa
-                    constantemente
-                    para su mejora continua.
-                </li>
-                <li>Aseguramos una comunicación interna y externa con las partes interesadas</li>
-                <li>Cumplimos con los requisitos legales, reglamentarios y de inocuidad aplicables a nuestros
-                    productos
-                    y los acordados con nuestros clientes.
-                </li>
-            </ol></div>
+                <p class="text-muted">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan
+                    garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para
+                    lograrlo:</p>
+                <ol class="text-muted">
+                    <li>Contamos con proveedores calificados</li>
+                    <li>Capacitamos constantemente a nuestro personal para que posea las competencias necesarias y éste
+                        comprometido con la elaboración y la distribución de alimentos inocuos
+                    </li>
+                    <li>Tenemos un Sistema de Gestión de Inocuidad Alimentaria FSSC 22000, el cual se revisa
+                        constantemente
+                        para su mejora continua.
+                    </li>
+                    <li>Aseguramos una comunicación interna y externa con las partes interesadas</li>
+                    <li>Cumplimos con los requisitos legales, reglamentarios y de inocuidad aplicables a nuestros
+                        productos
+                        y los acordados con nuestros clientes.
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
     <div class="display-big">
