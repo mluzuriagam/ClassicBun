@@ -90,7 +90,7 @@ def work_with_us():
         except:
             print("No Success")
             return redirect(url_for("index2", success="False"))
-    return render_template("form.html", form=form)
+    return render_template("form2.html", form=form)
 
 
 if __name__ == "__main__":
