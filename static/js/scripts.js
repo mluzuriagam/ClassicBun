@@ -87,3 +87,8 @@ window.addEventListener('DOMContentLoaded', event => {
     document.addEventListener("load", checkFloatingDiv);
 });
 
+window.addEventListener('DOMContentLoaded', window.scrollTo(0, 0))
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
