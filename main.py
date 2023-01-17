@@ -43,6 +43,11 @@ def index():
     return render_template("index.html", success=True)
 
 
+@app.route("/ec")
+def index3():
+    return render_template("index.html", success=True)
+
+
 @app.route("/<success>")
 def index2(success):
     print(success)
@@ -79,7 +84,8 @@ def work_with_us():
         try:
             print("Trying")
             for address in rc_mail:
-                mail_sender.send_mail(toaddr=address, subject="Solicitud de Trabajo", body=msg, attachment=form.data['CV'],
+                mail_sender.send_mail(toaddr=address, subject="Solicitud de Trabajo", body=msg,
+                                      attachment=form.data['CV'],
                                       filename=form.data['CV'].filename)
             return redirect(url_for("index2", success="True"))
         except:
