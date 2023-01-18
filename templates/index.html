@@ -44,7 +44,7 @@
 <section class="page-section" id="products">
     <div class="text-center">
         <h2 class="section-heading ">¿Qué hacemos?</h2>
-        <p class="section-subheading text-muted">Hacemos pan basado en los requerimientos de cada cliente,
+        <p class="section-subheading ">Hacemos pan basado en los requerimientos de cada cliente,
             guardando la delicadeza de su sabor, frescura y textura que caracterizan nuestra marca, con los estándares
             más altos de calidad.</p>
     </div>
@@ -53,7 +53,7 @@
            href="{{ url_for('static', filename='assets/pdf/Classic_bun.pdf')}}">Descargue aquí nuestro catálogo completo
             de productos</a>
     </div>
-    <div class="row text-left text-muted product-characteristics" style="margin:auto">
+    <div class="row text-left  product-characteristics" style="margin:auto">
         <div class="col-lg-6 sm-12">
             <ul>
                 <li>Diversos tamaños y gramajes</li>
@@ -117,13 +117,13 @@
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Dónde lo hacemos?</h2>
-            <p class="section-subheading text-muted" style="margin-bottom: 0;">En nuestra planta ubicada en <a
+            <p class="section-subheading " style="margin-bottom: 0;">En nuestra planta ubicada en <a
                     href="https://goo.gl/maps/rtczU8wege8oPRjP8">Santa Teresa de Jesús OE 10-B (Quito, Ecuador)</a></p>
             <img style="width:100%" src="{{url_for('static', filename='assets/img/company/fabrica.jpg')}}">
         </div>
         <div class="text-center">
             <h2 class="section-heading" style="padding-top:1rem">¿Y quién lo hace? </h2>
-            <p class="section-subheading text-muted" style="margin-bottom: 0;">Un comprometido equipo de
+            <p class="section-subheading " style="margin-bottom: 0;">Un comprometido equipo de
                 capacitados colaboradores.</p>
         </div>
         <div class="row justify-content-center" style="margin:auto">
@@ -139,8 +139,8 @@
         </div>
         <div class="text-center">
             <br>
-            <p class="section-subheading text-muted" style="margin-bottom: 0;"><a href="{{url_for('work_with_us')}}">Únete
-                a nuestro equipo!</a></p>
+            <a class="btn btn-primary btn-xl " href="{{url_for('work_with_us')}}">Únete
+                a nuestro equipo!</a>
         </div>
     </div>
 </section>
@@ -149,7 +149,7 @@
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Cómo garantizamos lo que hacemos?</h2>
-            <p class="section-subheading text-muted">Contamos con certificaciones que avalan la calidad de nuestros
+            <p class="section-subheading ">Contamos con certificaciones que avalan la calidad de nuestros
                 productos</p>
         </div>
         <div class="row" style="margin:auto">
@@ -246,7 +246,7 @@
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Hace cuánto lo hacemos?</h2>
-            <p class="section-subheading text-muted" style="text-align:justify;">Classic Bun es un gran sueño que inició
+            <p class="section-subheading " style="text-align:justify;">Classic Bun es un gran sueño que inició
                 hace 30 años, en ese entonces, José Luzuriaga Rosales finalizaba su carrera universitaria y para esto
                 preparó como proyecto de tesis un estudio de factibilidad para la implementación de una panificadora
                 enfocada a la producción de pan para franquicias. Simultáneamente una transnacional buscaba abrir su
@@ -259,12 +259,12 @@
         <div class="text-center">
             <a class="btn btn-primary btn-xl" data-bs-toggle="collapse" href="#collapseExample" role="button"
                aria-expanded="false" aria-controls="collapseExample">
-                Sigue nuestra historia aquí...
+                Sigue nuestra historia AQUÍ
             </a>
         </div>
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
-                <p class="section-subheading text-muted" style="text-align:justify;">José y su esposa Elizabeth Merlo
+                <p class="section-subheading " style="text-align:justify;">José y su esposa Elizabeth Merlo
                     deciden apostar por este sueño con el apoyo de sus Padres y la venta de su casa para la compra de
                     maquinaria. Como todo proyecto su inicio fue complicado, entre otras cosas debido a que la empresa
                     no
@@ -272,7 +272,7 @@
                     Ecuador y Perú de 1995. Sin embargo, con trabajo duro, sacrificio, constancia, y la colaboración
                     decidida de un grupo de trabajo comprometido, logró salir adelante y ha venido creciendo de forma
                     paulatina a lo largo de todos estos años.</p>
-                <p class="section-subheading text-muted" style="text-align:justify;">José y su esposa Elizabeth Merlo
+                <p class="section-subheading " style="text-align:justify;">José y su esposa Elizabeth Merlo
                     deciden apostar por este sueño con el apoyo de sus Padres y la venta de su casa para la compra de
                     maquinaria. Como todo proyecto su inicio fue complicado, entre otras cosas debido a que la empresa
                     no
@@ -290,7 +290,7 @@
                                 <h4>10 de junio de 1995</h4>
                                 <h4 class="subheading">Nuestros Inicios</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">José Luzuriaga aficionado a la mecánica
+                            <div class="timeline-body"><p class="">José Luzuriaga aficionado a la mecánica
                                 diseño un prototipo que pueda realizar este corte y al lograrlo con éxito empezó a
                                 cristalizar su proyecto para proveer de producto a la franquicia, naciendo así la
                                 Panificadora Classic Bun el 10 de junio de 1995 en la calle Bolivia y Eustorgio Salgado
@@ -306,7 +306,7 @@
                                 <h4>1995-2000</h4>
                                 <h4 class="subheading">Primeros Años</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Aún en 1995, se realiza el primer cambio de
+                            <div class="timeline-body"><p class="">Aún en 1995, se realiza el primer cambio de
                                 local a la calle Inglaterra y Vancouver donde permanece por 2 años hasta 1997, año en
                                 que se inició la construcción de una planta propia en la calle Pedro Guerrero y Avenida
                                 de las Anonas. Esta fue su sede durante 20 años, tiempo durante el cual se realizaron 2
@@ -322,7 +322,7 @@
                                 <h4>2000-2020</h4>
                                 <h4 class="subheading">Crecimiento</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted"><b>Para el 2018, Classic Bun ya cuenta con
+                            <div class="timeline-body"><p class=""><b>Para el 2018, Classic Bun ya cuenta con
                                 la certificación en seguridad alimentaria FSSC22000</b>, trabaja con las principales
                                 franquicias y restaurantes de comida rápida del país, y mantiene con énfasis el lema con
                                 el que nació: ¨Nuestra calidad, su éxito¨.</p></div>
@@ -338,7 +338,7 @@
                                 <h4 class="subheading">Nueva Planta</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">A finales del 2019, el hijo mayor de la familia, José Miguel
+                                <p class="">A finales del 2019, el hijo mayor de la familia, José Miguel
                                     Luzuriaga Merlo se une al equipo de trabajo con el objetivo de hacer crecer el
                                     proyecto de sus padres y con su perseverancia dio origen a un nuevo sueño que salió
                                     a flote a pesar de la pandemia del COVID 19. En contra de todo pronóstico el sueño
@@ -378,7 +378,7 @@
         </div>
         <div class="collapse" id="mision">
             <div class="card card-body">
-                <p class="text-muted" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada
+                <p class="" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada
                     nuevo proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es
                     brindar un servicio de calidad, que cubra todas las necesidades de nuestros clientes y proporcione
                     un alto grado de satisfacción mediante los productos que entregamos, siempre fabricados con la
@@ -392,7 +392,7 @@
         </div>
         <div class="collapse" id="vision">
             <div class="card card-body">
-                <p class="text-muted" style="text-align:justify">Classic Bun quiere seguir proyectándose como
+                <p class="" style="text-align:justify">Classic Bun quiere seguir proyectándose como
                     una empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio
                     personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el
                     aliado estratégico número uno de nuestra clientela.</p></div>
@@ -405,7 +405,7 @@
         </div>
         <div class="collapse" id="values">
             <div class="card card-body">
-                <p class="text-muted" style="text-align:justify">Algunos valores que nos destacan son la
+                <p class="" style="text-align:justify">Algunos valores que nos destacan son la
                     seriedad, responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y
                     responsabilidad. Estamos siempre enfocados en brindar una atención personalizada con altos
                     estándares de
@@ -420,10 +420,10 @@
         </div>
         <div class="collapse" id="inocuidad">
             <div class="card card-body">
-                <p class="text-muted">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan
+                <p class="">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan
                     garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para
                     lograrlo:</p>
-                <ol class="text-muted">
+                <ol class="">
                     <li>Contamos con proveedores calificados</li>
                     <li>Capacitamos constantemente a nuestro personal para que posea las competencias necesarias y éste
                         comprometido con la elaboración y la distribución de alimentos inocuos
@@ -446,7 +446,7 @@
             <div class="col-lg-4">
                 <div class="team-member">
                     <h4>Misión</h4>
-                    <p class="text-muted" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada
+                    <p class="" style="text-align:justify">Buscamos apoyar a nuestra clientela en cada
                         nuevo
                         proyecto que se nos encomienda para crecer conjuntamente a paso firme. Nuestra misión es
                         brindar
@@ -460,7 +460,7 @@
             <div class="col-lg-4">
                 <div class="team-member">
                     <h4>Visión</h4>
-                    <p class="text-muted" style="text-align:justify">Classic Bun quiere seguir proyectándose como
+                    <p class="" style="text-align:justify">Classic Bun quiere seguir proyectándose como
                         una
                         empresa líder en el mercado, buscamos ser la mejor panadería, ofreciendo siempre un servicio
                         personalizado y único a cada uno de nuestros clientes; queremos hacer de Classic Bun el
@@ -470,7 +470,7 @@
             <div class="col-lg-4">
                 <div class="team-member">
                     <h4>Valores Corporativos</h4>
-                    <p class="text-muted" style="text-align:justify">Algunos valores que nos destacan son la
+                    <p class="" style="text-align:justify">Algunos valores que nos destacan son la
                         seriedad,
                         responsabilidad, excelencia en el servicio, eficiencia, honestidad, respeto y
                         responsabilidad.
@@ -484,10 +484,10 @@
         </div>
         <div class="row" style="margin:auto">
             <h4>Política de Inocuidad</h4>
-            <p class="text-muted">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan
+            <p class="">En Classic Bun elaboramos productos de panadería bajo procesos que nos permitan
                 garantizar la calidad e inocuidad de los mismos, generando confianza a nuestros clientes, para
                 lograrlo:</p>
-            <ol class="text-muted">
+            <ol class="">
                 <li>Contamos con proveedores calificados</li>
                 <li>Capacitamos constantemente a nuestro personal para que posea las competencias necesarias y éste
                     comprometido con la elaboración y la distribución de alimentos inocuos
@@ -510,10 +510,10 @@
         style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image-3.jpg')}}')"
         id="contact">
     <div class="text-left">
-        <h2 class="section-heading ">Contacto</h2>
-        <p class="section-subheading contacto-width">Puede contactarnos a través de nuestros
+        <h2 class="section-heading">Contacto</h2>
+        <p class="section-subheading contacto-width" style="text-align:justify">Puede contactarnos a través de nuestros
             diversos medios de comunicación detallados en el pie de página o puede llenar este formato y nos
-            contactaremos a la brevedad posible..</p>
+            contactaremos a la brevedad posible.</p>
         <a class="btn btn-primary btn-xl " href="{{url_for('contact_form')}}">Formulario de Contacto</a>
     </div>
 </header>
@@ -521,7 +521,7 @@
 <div class="fixed-bottom"
      style="background-color:transparent; margin-bottom:10vh ;margin-right:5vw; text-align: right" id="float-popup">
     <a class="btn btn-success btn-social mx-2" href="https://api.whatsapp.com/send/?phone=593999686317">
-        <i class="fa-brands fa-whatsapp fa-4x"></i>
+        <i class="fa-brands fa-whatsapp fa-3x"></i>
     </a>
 </div>
 <!-- Footer-->
