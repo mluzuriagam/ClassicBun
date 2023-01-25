@@ -55,8 +55,12 @@ def index3():
 
 @app.route("/<success>")
 def index2(success):
-    print(success)
     return render_template("index.html", success=success)
+
+
+@app.route("/ec/index.php/productos", methods=["GET", "POST"])
+def index5():
+    return render_template("index.html", success=True)
 
 
 @app.route("/form", methods=["GET", "POST"])
