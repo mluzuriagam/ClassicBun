@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600;700&display=swap" rel="stylesheet" type="text/css">
     <!-- CSS includes Bootstrap-->
     <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet"/>
+    <!-- reCaptcha Integration -->
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 </head>
 <body id="page-top">
         <!-- Navigation-->
@@ -30,12 +32,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}/products">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}/processes">Ubicación/Equipo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}/certificates">Certificaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}/about">Historia</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}/business">Empresa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}/contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}products">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}processes">Ubicación/Equipo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}certificates">Certificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}about">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}business">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('index')}}contact">Contacto</a></li>
                     </ul>
                 </div>
             </div>

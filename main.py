@@ -5,10 +5,13 @@ from flask_wtf.file import FileField
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email
 from mail import EmailSender
+from flask_wtf.recaptcha import RecaptchaField
 import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+app.config['RECAPTCHA_PUBLIC_KEY'] = os.environ['RECAPTCHA_PUBLIC_KEY']
+app.config['RECAPTCHA_PRIVATE_KEY'] = os.environ['RECAPTCHA_PRIVATE_KEY']
 Bootstrap(app)
 
 # notify
@@ -25,6 +28,7 @@ class CreatePostForm(FlaskForm):
                         validators=[DataRequired("Debe incluir este campo"), Email("Correo de formato invalido")])
     phone = StringField("Teléfono(Opcional)")
     body = StringField("Mensaje", validators=[DataRequired("Debe incluir este campo")])
+    recaptcha = RecaptchaField()
     submit = SubmitField("Submit Post")
 
 
@@ -35,6 +39,7 @@ class CreatePostForm2(FlaskForm):
     phone = StringField("Teléfono(Opcional)")
     body = StringField("Mensaje", validators=[DataRequired("Debe incluir este campo")])
     CV = FileField("Suba aquí su CV")
+    recaptcha = RecaptchaField()
     submit = SubmitField("Submit Post")
 
 
