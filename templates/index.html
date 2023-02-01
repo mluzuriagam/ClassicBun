@@ -26,6 +26,12 @@
     </div>
 </nav>
 <!-- Aviso de Error-->
+{% if success=="Correct": %}
+<div class="container" style="padding-top:3rem">
+    <p style="color:red">Su mensaje se envió de manera correcta. Gracias por contactarnos</p>
+</div>
+{% endif %}
+
 {% if success=="False": %}
 <div class="container" style="padding-top:3rem">
     <p style="color:red">Error en envío, por favor use otro medio de comunicación</p>

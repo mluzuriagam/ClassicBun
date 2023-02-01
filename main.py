@@ -80,7 +80,7 @@ def contact_form():
             print("Trying")
             for address in rc_mail:
                 mail_sender.send_mail(toaddr=address, subject="Alerta de Venta", body=msg)
-            return redirect(url_for("index2", success="True"))
+            return redirect(url_for("index2", success="Correct"))
         except:
             print("No Success")
             return redirect(url_for("index2", success="False"))
