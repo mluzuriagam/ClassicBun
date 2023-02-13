@@ -11343,7 +11343,7 @@ body {
   width:100%;
 }
 @media (min-width: 768px){
-.btn-xl {
+.btn-2 {
     width:30%;
 }}
 .btn-social {
@@ -11776,7 +11776,7 @@ header.masthead .masthead-heading {
 }
 .team-member {
   margin-bottom: 3rem;
-  text-align: justify;
+  text-align: center;
 }
 .team-member img {
   width: 14rem;
