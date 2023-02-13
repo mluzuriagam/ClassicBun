@@ -48,6 +48,16 @@ def index():
     return render_template("index.html", success=True)
 
 
+@app.route("/ec/")
+def index4():
+    return render_template("index.html", success=True)
+
+
+@app.route("/ec")
+def index3():
+    return render_template("index.html", success=True)
+
+
 @app.route("/<success>")
 def index2(success):
     return render_template("index.html", success=success)
