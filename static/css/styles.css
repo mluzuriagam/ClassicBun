@@ -11776,7 +11776,7 @@ header.masthead .masthead-heading {
 }
 .team-member {
   margin-bottom: 3rem;
-  text-align: center;
+  text-align: justify;
 }
 .team-member img {
   width: 14rem;
@@ -11905,3 +11905,16 @@ display:none;
 }
 }
 
+@media (max-width: 768px) {
+  .history {
+  display:none;
+  }
+}
+.history2 {
+display:inline;
+  }
+@media (min-width:  768px) {
+  .history2 {
+  display:none;
+  }
+}
