@@ -2,7 +2,11 @@
 {% include "headers.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 <html lang="es">
+{% if anchor %}
+<body onload="moveWindow()">
+{% else %}
 <body>
+{% endif %}
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom" id="mainNav">
     <div class="container">
@@ -15,12 +19,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#products">Productos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#processes">Ubicación/Equipo</a></li>
-                <li class="nav-item"><a class="nav-link" href="#certificates">Certificaciones</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">Historia</a></li>
-                <li class="nav-item"><a class="nav-link" href="#business">Empresa</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación/Equipo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certificados">Certificaciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#empresa">Empresa</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </div>
@@ -47,7 +51,7 @@
     <a class="btn btn-primary btn-xl btn-2" href="#products">¿Qué hacemos?</a>
 </header>
 <!-- Productos-->
-<section class="page-section" id="products">
+<section class="page-section" id="productos">
     <div class="text-center">
         <h2 class="section-heading ">¿Qué hacemos?</h2>
         <p class="section-subheading ">Classic Bun elabora un pan exquisito y con las exigencias del mercado, pues
@@ -122,7 +126,7 @@
 
 </section>
 <!-- Ubicación -->
-<section class="page-section bg-light" id="processes">
+<section class="page-section bg-light" id="ubicacion">
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Dónde lo hacemos?</h2>
@@ -157,7 +161,7 @@
     </div>
 </section>
 <!-- Certificaciones-->
-<section class="page-section" id="certificates">
+<section class="page-section" id="certificados">
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Cómo garantizamos lo que hacemos?</h2>
@@ -254,7 +258,7 @@
     </div>
 </section>
 <!-- Historia-->
-<section class="page-section bg-light" id="about">
+<section class="page-section bg-light" id="historia">
     <div>
         <div class="text-center">
             <h2 class="section-heading ">¿Hace cuánto lo hacemos?</h2>
@@ -356,7 +360,7 @@
     </div>
 </section>
 <!-- Empresa-->
-<section class="page-section" id="business">
+<section class="page-section" id="empresa">
     <div class="text-center">
         <h2 class="section-heading ">¿Para qué lo hacemos?</h2>
     </div>
@@ -464,7 +468,7 @@
 <!-- Contact-->
 <header class="masthead"
         style="background-image: url('{{ url_for('static', filename='assets/img/general/bg-image-3.jpg')}}')"
-        id="contact">
+        id="contacto">
     <div class="text-left">
         <h2 class="section-heading">Contacto</h2>
         <p class="section-subheading contacto-width" style="text-align:justify">Puede contactarnos a través de nuestros diversos medios de comunicación, detallados al pie de página, o al llenar este formato para luego contactarnos con usted a la brevedad posible.</p>

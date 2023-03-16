@@ -50,7 +50,16 @@ def index():
 
 @app.route("/<success>")
 def index2(success):
-    return render_template("index.html", success=success)
+    anchors = ["productos", "ubicacion", "certificados", "historia", "empresa", "historia"]
+    if success == True or success == False:
+        return render_template("index.html", success=success)
+    elif success in anchors:
+        print(success)
+        print(type(success))
+        return render_template("index.html", success=True, anchor=success)
+    else:
+        return render_template("index.html", success=True)
+
 
 
 @app.route("/form", methods=["GET", "POST"])
