@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, make_response
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField
@@ -53,6 +53,14 @@ def index2(success):
     anchors = ["productos", "ubicacion", "certificados", "historia", "empresa", "contacto"]
     if success == True or success == False:
         return render_template("index.html", success=success)
+    elif success == "sitemap.xml":
+        response = make_response(open('sitemap.xml').read())
+        response.headers["Content-type"] = "text/plain"
+        return response
+    elif success == "robots.txt" or success == "Robots.txt":
+        response = make_response(open('robots.txt').read())
+        response.headers["Content-type"] = "text/plain"
+        return response
     elif success in anchors:
         return render_template("index.html", success=True, anchor=success)
     else:
