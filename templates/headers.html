@@ -4,9 +4,44 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="author" content="ClassicBun"/>
+    {% if anchor=="productos": %}
+    <title>Productos</title>
+    <meta name="description"
+          content="Classic Bun elabora un pan exquisito y con las exigencias del mercado, pues
+            guarda la delicadeza del sabor, la frescura y la textura, que caracterizan nuestra marca, cumpliendo con los
+            estándares más altos de calidad."/>
+    {% elif anchor=="ubicacion": %}
+    <title>Ubicación/Equipo</title>
+    <meta name="description"
+          content="La planta de Classic Bun está ubicada en Santa Teresa de Jesús OE 10-B (Quito, Ecuador)"/>
+    {% elif anchor=="certificados": %}
+    <title>Certificaciones</title>
+    <meta name="description"
+          content="Contamos con certificaciones que avalan la calidad de nuestros
+                productos."/>
+    {% elif anchor=="historia": %}
+    <title>Historia</title>
+    <meta name="description"
+          content="Hace 30 años, José Luzuriaga Rosales
+                finalizó su carrera universitaria mediante su proyecto de tesis con relación a un estudio de
+                factibilidad para la implementación de una panificadora enfocada a la producción de pan para
+                franquicias. Simultáneamente, una transnacional deseaba abrir su primer restaurante en Quito y no
+                encontró en el mercado una panadería que cumpla con sus requerimientos, entre estos, que el pan debería
+                estar cortado para facilitar sus procesos de elaboración de hamburguesas, como era la norma en otras
+                localidades donde la franquicia trabajaba."/>
+    {% elif anchor=="empresa": %}
+    <title>Empresa</title>
+    <meta name="description"
+          content="Apoyar al cliente en cada proyecto nuevo para crecer juntos a paso firme. Brindar un servicio eficiente y eficaz para cubrir todas las necesidades de nuestros usuarios, al proporcionar un alto grado de satisfacción mediante nuestros productos elaborados en la más alta calidad."/>
+    {% elif anchor=="contacto": %}
+    <title>Contacto</title>
+    <meta name="description"
+          content="Puede contactarnos a través de nuestros diversos medios de comunicación, detallados al pie de página, o al llenar este formato para luego contactarnos con usted a la brevedad posible."/>
+    {% else %}
+    <title>Classic Bun</title>
     <meta name="description"
           content="Hacemos pan basado en los requerimientos de cada cliente, guardando la delicadeza de su sabor, frescura y textura que caracterizan nuestra marca, con los estándares más altos de calidad."/>
-    <title>Classic Bun</title>
+    {% endif %}
     <!-- Favicon-->
     <link rel="icon" href="{{ url_for('static', filename='assets/img/general/favicon.ico')}}"/>
     <!-- Font Awesome icons (free version)-->
