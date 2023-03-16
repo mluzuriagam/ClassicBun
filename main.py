@@ -21,7 +21,7 @@ my_password = os.environ['google_key']
 mail_sender = EmailSender(fromaddr=my_mail, password=my_password)
 
 
-##WTForm
+# WTForm
 class CreatePostForm(FlaskForm):
     name = StringField("Nombre", validators=[DataRequired("Debe incluir este campo")])
     email = StringField("Correo",
