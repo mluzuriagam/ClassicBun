@@ -100,6 +100,17 @@ def work_with_us():
                 mail_sender.send_mail(toaddr=address, subject="Solicitud de Trabajo", body=msg,
                                       attachment=form.data['CV'],
                                       filename=form.data['CV'].filename)
+            msg2 = "Estimado/a solicitante,\nEste correo es para confirmar la recepción de su solicitud de empleo en " \
+                   "Classic Bun. Queremos agradecerle por su interés en formar parte de nuestro equipo.\nPor favor " \
+                   "tenga en cuenta que este correo no debe ser respondido y no debe ser considerado como una oferta " \
+                   "de trabajo. Solo estamos confirmando que hemos recibido su información y que la tendremos en " \
+                   "cuenta en caso de que surjan oportunidades laborales que se ajusten a su perfil.\nAgradecemos de " \
+                   "nuevo su interés en Classic Bun." \
+                   "\nAtentamente,\nEl equipo de Classic Bun.\n" \
+                   "PD. Este correo se produjo de manera automatizada y no atiende respuestas"
+            mail_sender.send_mail(toaddr=form.data['email'], subject="Confirmación de Recepción-NO RESPONDER", body=msg2,
+                                    attachment=form.data['CV'],
+                                    filename=form.data['CV'].filename)
             return redirect(url_for("index2", success="True"))
         except:
             print("No Success")
