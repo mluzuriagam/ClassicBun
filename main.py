@@ -108,9 +108,7 @@ def work_with_us():
                    "nuevo su interés en Classic Bun." \
                    "\nAtentamente,\nEl equipo de Classic Bun.\n" \
                    "PD. Este correo se produjo de manera automatizada y no atiende respuestas"
-            mail_sender.send_mail(toaddr=form.data['email'], subject="Confirmación de Recepción-NO RESPONDER", body=msg2,
-                                    attachment=form.data['CV'],
-                                    filename=form.data['CV'].filename)
+            mail_sender.send_mail(toaddr=form.data['email'], subject="Confirmación de Recepción-NO RESPONDER", body=msg2)
             return redirect(url_for("index2", success="True"))
         except:
             print("No Success")
