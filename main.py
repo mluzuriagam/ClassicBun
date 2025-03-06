@@ -16,7 +16,8 @@ Bootstrap(app)
 
 # notify
 my_mail = "mluzuriagam2@gmail.com"
-rc_mail = ["aluzuriaga@classicbun.com","mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
+rc_mail = ["mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
+rc_mail2 = ["aluzuriaga@classicbun.com","mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
 my_password = os.environ['google_key']
 mail_sender = EmailSender(fromaddr=my_mail, password=my_password)
 
@@ -96,7 +97,7 @@ def work_with_us():
     if form.validate_on_submit():
         try:
             print("Trying")
-            for address in rc_mail:
+            for address in rc_mail2:
                 mail_sender.send_mail(toaddr=address, subject="Solicitud de Trabajo", body=msg,
                                       attachment=form.data['CV'],
                                       filename=form.data['CV'].filename)
