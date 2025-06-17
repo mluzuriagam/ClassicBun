@@ -17,7 +17,7 @@ Bootstrap(app)
 # notify
 my_mail = "mluzuriagam2@gmail.com"
 rc_mail = ["mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
-rc_mail2 = ["aluzuriaga@classicbun.com","mluzuriagam@gmail.com", "jmluzuriagam@gmail.com"]
+rc_mail2 = ["mluzuriagam@gmail.com", "aluzuriaga@classicbun.com", "jmluzuriagam@gmail.com"]
 my_password = os.environ['google_key']
 mail_sender = EmailSender(fromaddr=my_mail, password=my_password)
 
