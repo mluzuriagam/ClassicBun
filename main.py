@@ -7,6 +7,7 @@ from wtforms.validators import DataRequired, Email
 from mail import EmailSender
 from flask_wtf.recaptcha import RecaptchaField
 import os
+import tempfile
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
@@ -97,10 +98,26 @@ def work_with_us():
     if form.validate_on_submit():
         try:
             print("Trying")
+
+            # Save the file to a temp location
+            file_storage = form.data['CV']
+            filename = file_storage.filename
+
+            with tempfile.NamedTemporaryFile(delete=False) as tmp:
+                file_path = tmp.name
+                file_storage.save(file_path)
+
+            # Send to all recipients using the saved temp file
             for address in rc_mail2:
-                mail_sender.send_mail(toaddr=address, subject="Solicitud de Trabajo", body=msg,
-                                      attachment=form.data['CV'],
-                                      filename=form.data['CV'].filename)
+                with open(file_path, 'rb') as f:
+                    mail_sender.send_mail(
+                        toaddr=address,
+                        subject="Solicitud de Trabajo",
+                        body=msg,
+                        attachment=f,
+                        filename=filename
+                    )
+
             msg2 = "Estimado/a solicitante,\nEste correo es para confirmar la recepción de su solicitud de empleo en " \
                    "Classic Bun. Queremos agradecerle por su interés en formar parte de nuestro equipo.\nPor favor " \
                    "tenga en cuenta que este correo no debe ser respondido y no debe ser considerado como una oferta " \
